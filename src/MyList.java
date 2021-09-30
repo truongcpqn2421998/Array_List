@@ -52,8 +52,12 @@ public class MyList<E> {
         return size;
     }
 
-    public MyList<E> clone(){
-        return this;
+    public Object[] clone(){
+        Object[] newArray= new Object[size];
+        for (int i = 0; i <elements.length ; i++) {
+            newArray[i]=elements[i];
+        }
+        return newArray;
     }
     public boolean contain(E o){
         for (int i = 0; i <size ; i++) {
